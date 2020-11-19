@@ -27,7 +27,7 @@ try{
 
     	 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/srinivas", "root", "");
 
-         // Step 2:Create a statement using connection object
+       
          PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL); 
      
          preparedStatement.setString(1, f);
@@ -38,7 +38,6 @@ try{
          preparedStatement.setString(6, con);
 
          System.out.println(preparedStatement);
-         // Step 3: Execute the query or update query
        result= preparedStatement.executeUpdate();
         
          if (result>0) {
